@@ -109,6 +109,29 @@
 			<version>1.18.28</version> <!-- Update Lombok version -->
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/io.qameta.allure/allure-rest-assured -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-rest-assured</artifactId>
+			<version>2.29.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
@@ -130,9 +153,10 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						
-						<suiteXmlFile>src/test/resources/testrunners/test_regression.xml</suiteXmlFile>
-					<!--	<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
+
+						<suiteXmlFile>
+							src/test/resources/testrunners/test_regression.xml</suiteXmlFile>
+						<!--	<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
 					</suiteXmlFiles>
 					<argLine>
 						--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED
